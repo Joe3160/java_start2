@@ -26,5 +26,21 @@ public class Demo {
         System.out.println(b2);
         boolean b3=Boolean.parseBoolean("TrUe");
         System.out.println(b3);
+
+        System.out.println("-----------------------------");
+        Double d1=Double.POSITIVE_INFINITY;
+        System.out.println(d1);//正无穷
+        Double d2=Double.NEGATIVE_INFINITY;//负无穷
+        System.out.println(d2);
+
+        System.out.println("--------------自动拆箱与装箱-------------------");
+        //Integer i1=new Integer(10);//从java9 不建议这么做。推荐这么做：Integer.valueOf(10)
+        Integer i2=Integer.valueOf(10);
+        int i3=i2;
+        System.out.println(i3);
+        int i4=8;
+        Integer i5=i4;
+        System.out.println(i5);
+
     }
 }
