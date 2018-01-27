@@ -1,0 +1,21 @@
+BufferedInputStream
+构造方法摘要
+BufferedInputStream(InputStream in)
+          创建一个 BufferedInputStream 并保存其参数，即输入流 in，以便将来使用。
+BufferedInputStream(InputStream in, int size)
+          创建具有指定缓冲区大小的 BufferedInputStream 并保存其参数，即输入流 in，以便将来使用。
+方法摘要
+ int	available()
+          返回可以从此输入流读取（或跳过）、且不受此输入流接下来的方法调用阻塞的估计字节数。
+ void	close()
+          关闭此输入流并释放与该流关联的所有系统资源。
+ void	mark(int readlimit)
+          参见 InputStream 的 mark 方法的常规协定。
+ boolean	markSupported()
+          测试此输入流是否支持 mark 和 reset 方法。
+ int	read()
+          参见 InputStream 的 read 方法的常规协定。
+ int	read(byte[] b, int off, int len)
+          从此字节输入流中给定偏移量处开始将各字节读取到指定的 byte 数组中。
+ void	reset()
+          参见 InputStream 的 reset 方法的常规协定。
