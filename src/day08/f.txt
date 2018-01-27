@@ -1,0 +1,2 @@
+getChannel()
+返回与此文件输出流有关的唯一 FileChannel 对象
