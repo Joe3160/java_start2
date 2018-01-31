@@ -1,4 +1,8 @@
 package day12;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,7 +32,7 @@ public class Demo {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            //关闭流
+            //关闭流   
             try {
                 //关闭流要从里到外
                 isr.close();
