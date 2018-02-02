@@ -1,0 +1,4 @@
+public class BufferedReaderextends Reader
+从字符输入流中读取文本，缓冲各个字符，从而实现字符、数组和行的高效读取。
+可以指定缓冲区的大小，或者可使用默认的大小。大多数情况下，默认值就足够大了。
+通常，Reader 所作的每个读取请求都会导致对底层字符或字节流进行相应的读取请求。因此，建议用 BufferedReader 包装所有其 read() 操作可能开销很高的 Reader（如 FileReader 和 InputStreamReader）。例如， 
