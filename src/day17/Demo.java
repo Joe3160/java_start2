@@ -35,7 +35,7 @@ public class Demo {
                     br.close();
                 }
                 if (fw != null) {
-                    fw.close();
+                    //fw.close();
                 }
                 if (fr != null) {
                     fr.close();
