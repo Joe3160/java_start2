@@ -1,4 +1,4 @@
-package day22;
+package day23;
 
 public class Average<T extends Number> {
     private T[] ts;
@@ -15,5 +15,11 @@ public class Average<T extends Number> {
         return (int) (sum / ts.length);
     }
 
-
+    public boolean equalAvg(Average<?> obj) {
+        if (this.average() == obj.average()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
