@@ -2,76 +2,63 @@ package common;
 
 public class helper {
 
-    public static void dump(){
-        System.out.println("");
-    }
 
-    public static void dump(int[] arr){
-        System.out.println("int array:"+arr.length+"(");
-        for (int i=0;i<arr.length;i++) {
-            System.out.println("    "+i+"=>"+arr[i]+",");
+    public static <T> void dump(T var) {
+        if (var instanceof Integer) {
+            System.out.println("(int)" + var);
+        } else if (var instanceof Short) {
+            System.out.println("(short)" + var);
+        } else if (var instanceof Byte) {
+            System.out.println("(byte)" + var);
+        } else if (var instanceof Character) {
+            System.out.println("(char)\'" + var + "\'");
+        } else if (var instanceof Boolean) {
+            System.out.println("(bool)" + var);
+        } else if (var instanceof Float) {
+            System.out.println("(float)" + var);
+        } else if (var instanceof Double) {
+            System.out.println("(double)" + var);
+        } else if (var instanceof String) {
+            System.out.println("(str)\"" + var + "\"");
+        } else if (var.getClass().isArray()) {
+
+
         }
-        System.out.println(")");
+
     }
 
-    public static void dump(int[][] arr){
-        System.out.println("int[][]array:"+arr.length+"(");
-        for (int i=0;i<arr.length;i++) {
-            System.out.printf("  ");
-            System.out.println("int[]array:"+arr[i].length+"(");
-            for (int j=0;j<arr[i].length;j++) {
-                System.out.println("    "+i+"=>"+arr[i][j]+",");
+    public static <Arr> void dump(Arr[] arr) {
+        System.out.println("array(" + arr.length + "){");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].getClass().isArray()) {
+                System.out.println(i + "=>[");
+                System.out.print("  ");
+                dump(arr[i]);
+                System.out.println("]");
+            } else {
+                if (arr[i] instanceof Integer) {
+                    System.out.println("    " + i + "=>(int)" + arr[i]);
+                } else if (arr[i] instanceof Short) {
+                    System.out.println("    " + i + "=>(short)" + arr[i]);
+                } else if (arr[i] instanceof Byte) {
+                    System.out.println("    " + i + "=>(Byte)" + arr[i]);
+                } else if (arr[i] instanceof Character) {
+                    System.out.println("    " + i + "=>(char)\'" + arr[i] + "\'");
+                } else if (arr[i] instanceof Boolean) {
+                    System.out.println("    " + i + "=>(bool)" + arr[i]);
+                } else if (arr[i] instanceof Float) {
+                    System.out.println("    " + i + "=>(float)" + arr[i]);
+                } else if (arr[i] instanceof Double) {
+                    System.out.println("    " + i + "=>(double)" + arr[i]);
+                } else if (arr[i] instanceof String) {
+                    System.out.println("    " + i + "=>(str)\"" + arr[i] + "\"");
+                }
             }
-            System.out.println("  ),");
-        }
-        System.out.println(")");
-    }
 
 
-
-
-
-    public static void dump(char var_char){
-
-        System.out.println("char("+var_char+")");
-    }
-    public static void dump(byte var_byte){
-
-        System.out.println("byte("+var_byte+")");
-    }
-
-    public static void dump(short var_short){
-
-        System.out.println("short("+var_short+")");
-    }
-    public static void dump(int var){
-
-        System.out.println("int("+var+")");
-    }
-    public static void dump(float var_float){
-
-        System.out.println("float("+var_float+")");
-    }
-
-    public static void dump(double var_double){
-        System.out.println("double("+var_double+")");
-    }
-
-    public static void dump(boolean bool){
-
-        System.out.println("boolean("+bool+")");
-    }
-
-    public static void dump(String str){
-        System.out.println("String("+str.length()+")"+"\""+str+"\"");
-    }
-
-
-    public static <Arr> void dump(Arr[] arr){
-        System.out.println("array("+arr.length+"){");
-        for (int i = 0; i <arr.length ; i++) {
-            System.out.println("    "+i+"=>"+arr[i]);
+            //System.out.println("    "+i+"=>"+arr[i]);
         }
         System.out.println("}");
     }
+
 }

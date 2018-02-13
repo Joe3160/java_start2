@@ -12,6 +12,14 @@ public class Demo {
         boolean flag2=GenMethod.have(str,"d");
         helper.dump(flag2);
         helper.dump(str);
+        //System.out.println(str.getClass().isArray());
+
+        String[][] a={
+                {"a","b","c"},
+                {"d","e","f"}
+        };
+
+        helper.dump(a);
 
 
     }
