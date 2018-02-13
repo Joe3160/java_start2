@@ -65,4 +65,13 @@ public class helper {
     public static void dump(String str){
         System.out.println("String("+str.length()+")"+"\""+str+"\"");
     }
+
+
+    public static <Arr> void dump(Arr[] arr){
+        System.out.println("array("+arr.length+"){");
+        for (int i = 0; i <arr.length ; i++) {
+            System.out.println("    "+i+"=>"+arr[i]);
+        }
+        System.out.println("}");
+    }
 }
