@@ -28,3 +28,4 @@ Map存储的是一组成对的数据
 `Collection`是所有集合的父接口，不包含`Map`
 `Set` 继承自`Collection`，不允许出现相同的元素。
 `List` 继承自`Collection`，以列表形式存储的集合。
+
